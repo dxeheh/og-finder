@@ -14,7 +14,7 @@ If you want you can use git to clone it using this command, but if you're readin
 git clone https://githib.com/dxeheh/og-finder
 ```
 ## Using og-finder
-og-finder is run by double clicking on the script itself. It provides you with the necessary prompt for you to go out and begin searching.
+og-finder is run by double clicking on the script itself. It provides you with the necessary prompt for you to go out and begin searching.  
 Example:  
 ```
 
