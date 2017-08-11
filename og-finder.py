@@ -60,7 +60,7 @@ def search():
     with open("found.txt", "w+") as f:
         for x in found:f.write(x + "\n")
 
-    print("\nDone.\n")
+    print("\nDone.\nNames found have been written to found.txt.\n")
     end()
 
 
