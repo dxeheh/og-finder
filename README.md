@@ -33,6 +33,6 @@ Unavaiable: abb
 ```
 Apparently those are words in the English language. Yeah, I'm working on that.
 ## Authors
-* **@ryanxea** - Literally everything
+* **dxeheh** - Literally everything
 ## Acknowledgments
 * **NameMC** for recieving all the requests that this sends them and not going down.
