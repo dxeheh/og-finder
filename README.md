@@ -17,8 +17,21 @@ git clone https://githib.com/dxeheh/og-finder
 og-finder is run by double clicking on the script itself. It provides you with the necessary prompt for you to go out and begin searching.  
 Example:  
 ```
+og-finder v1.3
+developed by dxeheh
 
+
+Beginning check for avaliable names...
+
+Unavaiable: aaa
+Unavaiable: aah
+Unavaiable: aal
+Unavaiable: aam
+Unavaiable: aas
+Unavaiable: aba
+Unavaiable: abb
 ```
+Apparently those are words in the English language. Yeah, I'm working on that.
 ## Authors
 * **@ryanxea** - Literally everything
 ## Acknowledgments
