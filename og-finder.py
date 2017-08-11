@@ -55,14 +55,11 @@ def search():
         if "profile" not in url:
             if "Blocked" not in str(urlopen(u).read()):
                 print("\n************** AVALIABLE **************: " + x + "\n")
-                found.append(x)
+                with open("found.txt", "w+") as f:f.write(x + "\n")
             else:
                 print("   Blocked: " + x)
                 continue
         else:print("Unavaiable: " + x)
-
-    with open("found.txt", "w+") as f:
-        for x in found:f.write(x + "\n")
 
     print("\nDone.\nNames found have been written to found.txt.\n")
     end()
