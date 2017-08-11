@@ -53,8 +53,12 @@ def search():
         u = Request(r, headers={'User-Agent': 'Mozilla/5.0'})
         url = urlopen(u).geturl()
         if "profile" not in url:
-            print("\n\n************** AVALIABLE **************: " + x + "\n\n")
-            found.append(x)
+            if "Blocked" not in str(urlopen(u).read()):
+                print("\n************** AVALIABLE **************: " + x + "\n")
+                found.append(x)
+            else:
+                print("   Blocked: " + x)
+                continue
         else:print("Unavaiable: " + x)
 
     with open("found.txt", "w+") as f:
