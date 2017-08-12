@@ -54,8 +54,10 @@ def search():
         url = urlopen(u).geturl()
         if "profile" not in url:
             if "Blocked" not in str(urlopen(u).read()):
+                found.append(x)
                 print("\n************** AVALIABLE **************: " + x + "\n")
-                with open("found.txt", "w+") as f:f.write(x + "\n")
+                with open("found.txt", "w+") as f:
+                    for i in found:f.write(i + "\n")
             else:
                 print("   Blocked: " + x)
                 continue
