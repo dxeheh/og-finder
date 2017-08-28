@@ -1,5 +1,5 @@
 # og-finder
-og-finder is a script designed using the NameMC *API* to quicky scan for any unclaimed english words. You can specify what lengths of names you desire, but keep in mind the more words you have the longer it will take. Soon it will contain a way to specify the difficulty of words used in order to prevent all the random words that are apparently in English but have never been seen on the face of this earth before from being checked. I'm still working on that.
+og-finder is a script designed using the NameMC *"API"* to scan for any unclaimed english words. You can specify what lengths of names you desire, but keep in mind the more words you have the longer it will take. Right now many words may appear that don't really look like English words. More options as far as complexity will be added soon. See the To-Do Section for more details..
 ## Getting Started
 og-finder is not particurally difficult to install, but here's some basic information about the setup process.
 ### Prerequisites
@@ -23,16 +23,11 @@ developed by dxeheh
 
 Beginning check for avaliable names...
 
-Unavaiable: aaa
-Unavaiable: aah
-Unavaiable: aal
-Unavaiable: aam
-Unavaiable: aas
-Unavaiable: aba
-Unavaiable: abb
+Unavaiable: and
+Unavaiable: the
 ```
-Apparently those are words in the English language. Yeah, I'm working on that.
-## Authors
+And so on.
+### Authors
 * **dxeheh** - Literally everything
-## Acknowledgments
+### Acknowledgments
 * **NameMC** for recieving all the requests that this sends them and not going down.
