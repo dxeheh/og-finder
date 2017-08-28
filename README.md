@@ -36,4 +36,4 @@ A list of features that may or may not be ever added.
 ## Authors
 * **dxeheh** - Everything
 ## Acknowledgments
-* **NameMC** for recieving all the requests that this sends them and not going down.
+* **NameMC** for recieving all the requests that this sends them.
