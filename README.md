@@ -27,7 +27,13 @@ Unavaiable: and
 Unavaiable: the
 ```
 And so on.
+## To-Do
+A list of features that may or may not be ever added.
+* Threading
+* Add dictionaries of various complexities.
+* Improve error support
+* Add a more "brute-force" way of searching (not dictionary based)
 ## Authors
-* **dxeheh** - Literally everything
+* **dxeheh** - Everything
 ## Acknowledgments
 * **NameMC** for recieving all the requests that this sends them and not going down.
