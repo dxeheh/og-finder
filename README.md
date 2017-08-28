@@ -27,7 +27,7 @@ Unavaiable: and
 Unavaiable: the
 ```
 And so on.
-### Authors
+## Authors
 * **dxeheh** - Literally everything
-### Acknowledgments
+## Acknowledgments
 * **NameMC** for recieving all the requests that this sends them and not going down.
