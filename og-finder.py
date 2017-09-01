@@ -47,17 +47,14 @@ def search():
 
     print("Beginning check for avaliable names...\n")
 
-    found = []
     for x in lines:
         r = "http://mine.ly/" + x + ".1"
         u = Request(r, headers={'User-Agent': 'Mozilla/5.0'})
         url = urlopen(u).geturl()
         if "profile" not in url:
             if "Blocked" not in str(urlopen(u).read()):
-                found.append(x)
                 print("\n************** AVALIABLE **************: " + x + "\n")
-                with open("found.txt", "w+") as f:
-                    for i in found:f.write(i + "\n")
+                with open("found.txt", "a+") as f:f.write("{}\n".format(x))
             else:
                 print("   Blocked: " + x)
                 continue
