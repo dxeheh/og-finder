@@ -1,5 +1,6 @@
 #!python3
-from urllib.request import Request, urlopen
+import urllib.request
+import itertools
 import os, sys
 
 def clearScreen():
@@ -44,21 +45,18 @@ def search():
     
     with open("edited.txt", "r") as f:lines = f.readlines()
     lines = [x.strip() for x in lines]
-
+    
     print("Beginning check for avaliable names...\n")
 
     for x in lines:
-        r = "http://mine.ly/" + x + ".1"
-        u = Request(r, headers={'User-Agent': 'Mozilla/5.0'})
-        url = urlopen(u).geturl()
-        if "profile" not in url:
-            if "Blocked" not in str(urlopen(u).read()):
+        try:
+            r = urllib.request.urlopen("https://api.mojang.com/users/profiles/minecraft/" + x)
+            if 'name' in str(r.read()):print("Unavaiable: " + x)
+            else:
                 print("\n************** AVALIABLE **************: " + x + "\n")
                 with open("found.txt", "a+") as f:f.write("{}\n".format(x))
-            else:
-                print("   Blocked: " + x)
-                continue
-        else:print("Unavaiable: " + x)
+        except Exception as e:print(e)
+            
 
     print("\nDone.\nNames found have been written to found.txt.\n")
     end()
