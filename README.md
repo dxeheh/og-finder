@@ -1,5 +1,5 @@
 # og-finder
-og-finder is a script designed using the Mojang API to scan for any unclaimed english words. You can specify what lengths of names you desire, but keep in mind the more words you have the longer it will take. Right now many words may appear that don't really look like English words. More options as far as complexity will be added soon. See the To-Do Section for more details..
+og-finder is a script designed using the NameMC *"API"* to scan for any unclaimed english words. You can specify what lengths of names you desire, but keep in mind the more words you have the longer it will take. Right now many words may appear that don't really look like English words. More options as far as complexity will be added soon. See the To-Do Section for more details..
 ## Getting Started
 og-finder is not particurally difficult to install, but here's some basic information about the setup process.
 ### Prerequisites
