@@ -1,6 +1,6 @@
 #!python3
-import urllib.request
-import itertools
+from urllib.request import Request, urlopen
+from itertools import product
 import os, sys
 
 def clearScreen():
@@ -43,20 +43,30 @@ def search():
         print("You have not yet created a dictionary. Please select the first option.")
         return
     
-    with open("edited.txt", "r") as f:lines = f.readlines()
-    lines = [x.strip() for x in lines]
-    
+    #with open("edited.txt", "r") as f:lines = f.readlines()
+    #lines = [x.strip() for x in lines]
+    alphanum = "abcdefghijklmnopqrstuvwxyz"
+    lines = [''.join(i) for i in product(alphanum, repeat = 3)]
+
     print("Beginning check for avaliable names...\n")
 
     for x in lines:
         try:
-            r = urllib.request.urlopen("https://api.mojang.com/users/profiles/minecraft/" + x)
-            if 'name' in str(r.read()):print("Unavaiable: " + x)
-            else:
-                print("\n************** AVALIABLE **************: " + x + "\n")
-                with open("found.txt", "a+") as f:f.write("{}\n".format(x))
-        except Exception as e:print(e)
-            
+            r = "http://namemc.com/name/" + x
+            u = Request(r, headers={'User-Agent': 'Mozilla/5.0'})
+            url = str(urlopen(u).read())
+            if "Unavailable" not in url:
+                if "Blocked" in url:print("   Blocked: " + x)
+                elif "Available Later" in url:
+                    print("      Soon: " + x)
+                    with open("soon.txt", "a+") as f:f.write("{}\n".format(x))
+                else:
+                    print("\n************** AVALIABLE **************: " + x + "\n")
+                    with open("found.txt", "a+") as f:f.write("{}\n".format(x))
+                    continue
+            else:print("Unavaiable: " + x)
+        except Exception as e:
+            print(e)
 
     print("\nDone.\nNames found have been written to found.txt.\n")
     end()
@@ -76,4 +86,3 @@ def main():
         
 if __name__ == "__main__":
     main()
-
