@@ -35,3 +35,5 @@ A list of features that may or may not be ever added.
 * Add a more "brute-force" way of searching (not dictionary based)
 ## Authors
 * **dxeheh** - Everything
+## Acknowledgments
+* **NameMC** for taking my requests xd
