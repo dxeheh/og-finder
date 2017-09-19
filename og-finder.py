@@ -1,4 +1,4 @@
-#!python3
+#!/usr/bin/env python3
 from urllib.request import Request, urlopen
 from itertools import product
 import os, sys
