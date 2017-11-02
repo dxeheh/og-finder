@@ -4,7 +4,7 @@ from itertools import product
 import os, sys
 
 def clearScreen():
-    if sys.platform == 'win32':os.system('cls')
+    if os.name == 'nt':os.system('cls')
     else:os.system('clear')
     print("og-finder v1.3\ndeveloped by dxeheh\n\n")
 
