@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from urllib.request import Request, urlopen
 from itertools import product
-import os, sys
+import os
 
 def clearScreen():
     if os.name == 'nt':os.system('cls')
